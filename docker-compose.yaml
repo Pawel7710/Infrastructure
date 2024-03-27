@@ -12,7 +12,7 @@ services:
       - 5000:5000
     restart: always
     volumes:
-      - ./jenkins_controller/jenkins.yml:/usr/share/jenkins/ref/jenkins.yaml
+      - ./jenkins_controller/jenkins.yaml:/usr/share/jenkins/ref/jenkins.yaml
 
   jenkins_agent:
     build: ./jenkins_agent
@@ -60,6 +60,7 @@ services:
         - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
      restart: always
 
+     
 
   # artifactory:
   #   image: docker.bintray.io/jfrog/artifactory-jcr:7.39.4
